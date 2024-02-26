@@ -1,8 +1,8 @@
 'use strict';
 
-let string1 = prompt('Enter the first line:');
-let string2 = prompt('Enter the second line:');
-let string3 = prompt('Enter the third line:');
+const string1 = prompt('Enter the first line:');
+const string2 = prompt('Enter the second line:');
+const string3 = prompt('Enter the third line:');
 
 console.log('Entered information' + ':' + ' ' + string1 + string2 + string3);
 /************/
