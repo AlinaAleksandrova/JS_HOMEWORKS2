@@ -8,7 +8,7 @@ const subtraction = Number(a) - Number(b);
 const multiplication = Number(a) * Number(b);
 const division = Number(a) / Number(b);
 
-console.log("Rezalt:" + " " + a + " + " + b + " " + "=" + " " + addition );
-console.log("Rezalt:" + " " + a + " - " + b + " " + "=" + " " + subtraction );
-console.log("Rezalt:" + " " + a + " * " + b + " " + "=" + " " + multiplication );
-console.log("Rezalt:" + " " + a + " / " + b + " " + "=" + " " + division );
+console.log("Result:" + " " + a + " + " + b + " " + "=" + " " + addition );
+console.log("Result:" + " " + a + " - " + b + " " + "=" + " " + subtraction );
+console.log("Result:" + " " + a + " * " + b + " " + "=" + " " + multiplication );
+console.log("Result:" + " " + a + " / " + b + " " + "=" + " " + division );
