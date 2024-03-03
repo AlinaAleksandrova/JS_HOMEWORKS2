@@ -1,8 +1,7 @@
 'use strict';
 
 // Задача 1
-let user = {};
-let user = {
+ const user = {
     name: "John",
     surname: "Smith"
 };
