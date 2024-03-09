@@ -9,8 +9,7 @@ switch (true){
         console.log('ви скасували');
         break;
     }
-    case numOrStr.trim() === '':
-    {
+    case numOrStr.trim() === '': {
         console.log('Empty String');
         break;
     }
