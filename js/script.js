@@ -1,8 +1,8 @@
 'use strict';
 
 //1
-let x = 10;
-let y = 7;
+const x = 10;
+const y = 7;
 console.log(x < y ? `x більше за y` : `x не більше, ніж y`);
 
 //2
@@ -52,7 +52,6 @@ if (value1 !== null && value2 !== null && value3 !== null) {
 else {
     console.log("Будь-ласка, введіть всі три числа!");
 }
-//console.log(Math.max(value1, value2, value3));
 
 //4
 
