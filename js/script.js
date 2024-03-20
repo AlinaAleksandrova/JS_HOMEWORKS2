@@ -14,19 +14,25 @@ if (isNaN(value1)){
     alert("It's not a number :( Try again.")
 }
 else {
-    if(question === "ADD" || question === "Add" || question === "add" ){
-        alert("Result: " + value1 + " + " + value2 + " = " + add );
-    }
-    else if(question === "SUB" || question === "Sub" || question === "sub" ){
-        alert("Result: " + value1 + " - " + value2 + " = " + sub );
-    }
-    else if(question === "MULT" || question === "Mult" || question === "mult" ){
-        alert("Result: " + value1 + " * " + value2 + " = " + mult );
-    }
-    else if(question === "DIV" || question === "Div" || question === "div" ){
-        alert("Result: " + value1 + " / " + value2 + " = " + div );
-    }
-    else {
-        alert("Enter the correct action")
+    switch (questionLowerCase){
+        case "add": {
+            alert("Result: " + value1 + " + " + value2 + " = " + add);
+            break;
+        }
+        case "sub": {
+            alert("Result: " + value1 + " - " + value2 + " = " + sub);
+            break;
+        }
+        case "mult": {
+            alert("Result: " + value1 + " * " + value2 + " = " + mult);
+            break;
+        }
+        case "div":{
+            alert("Result: " + value1 + " / " + value2 + " = " + div );
+            break;
+        }
+        default:
+            alert("Enter the correct action");
+            break;
     }
 }
