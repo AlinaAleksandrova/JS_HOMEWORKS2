@@ -43,7 +43,28 @@ if (primeNumber(num)) {
     console.log("Число " + num + " не є простим числом.");
 }
 //5
-const num2 = 3;
+const num2 = 81;
+
+for(let i = 1;; i++){
+    const calc = 3 ** i;
+
+    if(calc > num2){
+        console.log("Не можу знайти число:(");
+        break;
+    }
+
+    if(calc === num2){
+        console.log("Результат: " + calc);
+        break;
+    }
+}
+
+
+
+
+
+
+/*const num2 = 3;
 let divisibleByThree = 1;
 
 while (divisibleByThree < num2){
@@ -55,4 +76,4 @@ while (divisibleByThree < num2){
 }
 if(divisibleByThree !== num2){
     console.log("Число НЕ можна отримати шляхом зведення числа 3 у деякий ступінь " + num2);
-}
+}*/
