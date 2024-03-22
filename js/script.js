@@ -58,22 +58,3 @@ for(let i = 1;; i++){
         break;
     }
 }
-
-
-
-
-
-
-/*const num2 = 3;
-let divisibleByThree = 1;
-
-while (divisibleByThree < num2){
-    divisibleByThree = divisibleByThree * 3;
-    if(divisibleByThree === num2){
-        console.log("Число можна отримати шляхом зведення числа 3 у деякий ступінь " + num2);
-        break;
-    }
-}
-if(divisibleByThree !== num2){
-    console.log("Число НЕ можна отримати шляхом зведення числа 3 у деякий ступінь " + num2);
-}*/
