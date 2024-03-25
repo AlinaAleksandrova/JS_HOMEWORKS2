@@ -2,7 +2,7 @@
 
 const sym = "*";
 const stringFunction = function padString(str, num, sym, bool = true) {
-    if (str === '') {
+    if (typeof str !== 'string') {
         return "Ви не ввели строку.";
     } else if (isNaN(num) || num === "" || typeof num === "string" ) {
         return "Ви не ввели число.";
