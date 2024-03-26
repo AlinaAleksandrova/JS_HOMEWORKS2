@@ -22,9 +22,9 @@ if (birthYear !== null && birthYear !== "") {
             }
 
             if (sport.toLowerCase() === "бодібілдинг") {
-                message = message + "Круто! Хочеш стати " + getSport("футбол") + "?";
+                message = message + "Круто! Хочеш стати " + getSport("бодібілдинг") + "?";
             } else if (sport.toLowerCase() === "бокс") {
-                message = message + "Круто! Хочеш стати " + getSport("теніс") + "?";
+                message = message + "Круто! Хочеш стати " + getSport("бокс") + "?";
             } else if (sport.toLowerCase() === "баскетбол") {
                 message = message + "Круто! Хочеш стати " + getSport("баскетбол") + "?";
             } else {
