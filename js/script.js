@@ -73,10 +73,9 @@ for (let i = 0; i < users.length; i++){
 
 for(let i = 0; i <users.length; i++){
     const balance = users[i].balance ? parseFloat(users[i].balance.replace(/[$,]/g, '')) : 0;
-    console.log(balance)
     sum = sum + balance;
 }
 
-console.log("Cумма всіх балансів користувачів: " + sum.toFixed(2));
+console.log("Cума всіх балансів користувачів: " + sum.toFixed(2));
 
 
