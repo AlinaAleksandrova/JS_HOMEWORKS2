@@ -65,14 +65,14 @@ const phoneNumber = users.map(phoneFunction);
 let sum = 0;
 console.log("Номера телефонів користувачів, у яких баланс більше 2000 доларів:");
 for (let i = 0; i < users.length; i++){
-    const balance = users[i].balance ? parseFloat(users[i].balance.replace(/[$,]/g, '')) : 0;
+    const balance = parseFloat(users[i].balance.replace(/[$,]/g, '') || 0);
     if(balance > 2000){
         console.log(phoneNumber[i]);
     }
 }
 
 for(let i = 0; i <users.length; i++){
-    const balance = users[i].balance ? parseFloat(users[i].balance.replace(/[$,]/g, '')) : 0;
+    const balance = parseFloat(users[i].balance.replace(/[$,]/g, '') || 0);
     sum = sum + balance;
 }
 
