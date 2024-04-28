@@ -1,24 +1,31 @@
 'use strict';
 
+(function (){
+    const user ={
+        firstName: 'Alina',
+        lastName: "Maimeskul"
 
-const bind = function(context) {
-    const variable = this;
-    const arr = [];
-    for (let i = 1; i < arguments.length; i++) {
-        arr.push(arguments[i]);
     }
-    return function() {
-        const variable2 = [];
-        for (let i = 0; i < arguments.length; i++) {
-            variable2.push(arguments[i]);
-        }
-        const allArr = args.concat(funcArgs);
-        const res = variable(...allArgs);
-        return res;
-    };
-};
+    const call = function (func, context, arg){
+        context.func = func;
+        context.func();
+        delete context.func;
+    }
 
-console.log(bind)
+    const bind = function (func, context, arg){
+        return function (){
+            return call(func, context, arg);
+        }
+    }
+    const display = function (){
+        console.log(this.lastName);
+    }
+
+    call(display, user);
+    const d = bind(display, user);
+    console.log(d);
+    d();
+})()
 
 
 
