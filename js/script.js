@@ -1,14 +1,17 @@
 'use strict';
 (function (){
     const person = {
-        fullName: function() {
-            return this.firstName + " " + this.lastName;
-        }
+        name: 'Alina',
+        phone: '333-333-333',
+        email: 'a@gmail.com'
     }
-    const person1 = {
-        firstName: "Mary",
-        lastName: "Doe",
+    const info = function (phone, email){
+        console.log('Імя ' + this.name + ' Телефон ' + this.phone + ' Email ' + this.email)
     }
-    console.log(person.fullName.apply(person1));
-
+    const myApply = function (fn, context, arg){
+        context.fn = fn;
+        context.fn();
+        delete context.fn;
+    }
+    myApply(info, person, ['333-333-333', 'a@gmail.com'])
 })()
