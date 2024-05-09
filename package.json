@@ -4,7 +4,7 @@
   "description": "jest test",
   "main": "script.js",
   "scripts": {
-    "test": "npx jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
     "testCoverage": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage"
   },
   "repository": {
