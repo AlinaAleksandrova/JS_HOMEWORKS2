@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/AlinaAleksandrova/JS_HOMEWORKS2#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "babel-core": "^7.0.0-bridge.0",
     "jest": "^29.7.0"
   },
