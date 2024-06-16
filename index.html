@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Додати в обране</title>
+    <style>
+        #items-list{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .favorite button{
+            background: #000;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-
+    <main>
+        <div class="container">
+            <div class="row">
+                <ul id="items-list">
+                    <li data-id="1">
+                        <button class="favorite-btn">Додати в обране</button>
+                    </li>
+                    <li data-id="2">
+                        <button class="favorite-btn">Додати в обране</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
 <script src="./js/script.js"></script>
 </body>
