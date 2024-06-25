@@ -49,15 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categories.addEventListener('click', function(e) {
         if (e.target.tagName === 'LI') {
-            var category = e.target.dataset.category;
+            const category = e.target.dataset.category;
             displayProducts(category);
         }
     });
 
     productList.addEventListener('click', function(e) {
         if (e.target.tagName === 'LI') {
-            var category = e.target.dataset.category;
-            var productId = e.target.dataset.id;
+            const category = e.target.dataset.category;
+            const productId = e.target.dataset.id;
             displayProductInfo(category, productId);
         }
     });
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayProductInfo(category, productId) {
-        var product = data[category].find(function(p) {
+        const product = data[category].find(function(p) {
             return p.id == productId;
         });
         productDetInfo.innerHTML = '<h3>' + product.name + '</h3><p>' + product.description + '</p>';
