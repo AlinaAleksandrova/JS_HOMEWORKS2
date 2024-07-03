@@ -47,7 +47,7 @@ Student.prototype.absenteeism = function () {
 Student.prototype.getVisitingRate = function () {
     const visitingClasses = this.attendance.filter(day => day === true).length;
     const totalClasses = this.attendance.filter(day => day !== null).length;
-    
+
     return visitingClasses / totalClasses;
 };
 
@@ -64,7 +64,7 @@ Student.prototype.summary = function () {
     }
 };
 
-// Creating instances of Student
+
 const s1 = new Student('Letty', 'Ortiz', 2001, [67, 98, 100, 56]);
 const s2 = new Student('Paul', 'Walker', 2000, [70, 65, 60, 75]);
 const s3 = new Student('Dominic', 'Toretto', 1999, [78, 75, 64, 68]);
