@@ -1,9 +1,19 @@
-import { useState } from 'react'
+import React, { Component } from 'react';
+import ListGroup from './components/ListGroup.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <></>
-  )
+class App extends Component {
+  render() {
+    return (
+        <div className="container">
+          <ListGroup>
+            <p>one</p>
+            <p>two</p>
+          </ListGroup>
+        </div>
+    );
+  }
 }
 
-export default App
+export default App;
+
