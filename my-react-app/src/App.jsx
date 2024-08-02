@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import TodoBox from './TodoBox';
 
-function App() {
-  return (
-    <></>
-  )
+class App extends React.Component {
+  render() {
+    return <TodoBox />;
+  }
 }
 
 export default App
