@@ -1,9 +1,17 @@
-import { useState } from 'react'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Collapse from './components/Collapse.jsx';
 
-function App() {
-  return (
-    <></>
-  )
+class App extends Component {
+  render() {
+    const text = "collapse me";
+    return (
+        <div>
+          <Collapse text={text} opened={false} />
+        </div>
+    );
+  }
 }
 
-export default App
+ReactDOM.render(<App />, document.getElementById('root'));
+
