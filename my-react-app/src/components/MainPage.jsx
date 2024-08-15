@@ -24,6 +24,12 @@ class MainPage extends Component {
         resetForm();
     };
 
+    handleDelete = (id) => {
+        const updatedTodos = this.state.todos.filter(todo => todo.id !== id);
+        this.setState({ todos: updatedTodos });
+        localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    };
+
     render() {
         return (
             <div>
@@ -48,7 +54,7 @@ class MainPage extends Component {
                         </Form>
                     )}
                 </Formik>
-                <TodoList todos={this.state.todos} />
+                <TodoList todos={this.state.todos} handleDelete={this.handleDelete} />
             </div>
         );
     }
