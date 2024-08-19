@@ -12,6 +12,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={<PostsList />} />
                     <Route path="/add-post" element={<AddPostForm />} />
-                    <Route path="/edit-post/:postId" element={<
+                    <Route path="/edit-post/:postId" element={<EditPostForm />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+}
 
-
+export default App;

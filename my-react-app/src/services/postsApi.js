@@ -1,45 +1,43 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-// Визначаємо наш API service
-const postsApi = createApi({
+export const postsApi = createApi({
     reducerPath: 'postsApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com/' }),
     endpoints: (builder) => ({
         getPosts: builder.query({
-            query: () => 'posts'
+            query: () => 'posts',
         }),
         getPostById: builder.query({
-            query: (id) => `posts/${id}`
+            query: (id) => `posts/${id}`,
         }),
         addPost: builder.mutation({
-            query: (post) => ({
+            query: (newPost) => ({
                 url: 'posts',
                 method: 'POST',
-                body: post
-            })
+                body: newPost,
+            }),
         }),
         updatePost: builder.mutation({
             query: ({ id, ...rest }) => ({
                 url: `posts/${id}`,
                 method: 'PUT',
-                body: rest
-            })
+                body: rest,
+            }),
         }),
         deletePost: builder.mutation({
             query: (id) => ({
                 url: `posts/${id}`,
-                method: 'DELETE'
-            })
+                method: 'DELETE',
+            }),
         }),
     }),
 });
 
+// Export hooks for usage in functional components, which are auto-generated based on the defined endpoints
 export const {
     useGetPostsQuery,
     useGetPostByIdQuery,
     useAddPostMutation,
     useUpdatePostMutation,
-    useDeletePostMutation
+    useDeletePostMutation,
 } = postsApi;
-
-export default postsApi;
