@@ -64,5 +64,3 @@ CRUD — це абревіатура, яка означає чотири осн�
 
 Ці операції є базовими для роботи з будь-якими даними, тому їх називають CRUD-операціями.
 
-
-npm install @reduxjs/toolkit react-redux @rtk-incubator/rtk-query

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { postsApi } from '../services/postsApi';
+import { postsApi } from './services/postsApi';
 
 export const store = configureStore({
     reducer: {
@@ -8,4 +8,5 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(postsApi.middleware),
 });
+
 
