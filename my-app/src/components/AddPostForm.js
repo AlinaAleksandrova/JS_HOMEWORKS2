@@ -29,6 +29,8 @@ function AddPostForm() {
             <button type="submit" disabled={isLoading}>Add Post</button>
         </form>
     );
+
+
 }
 
 export default AddPostForm;

@@ -9,7 +9,7 @@ function PostsList() {
 
     return (
         <ul>
-            {posts.map(post => (
+            {posts?.map(post => (
                 <li key={post.id}>
                     <h4>{post.id}. {post.title}</h4>
                     <p>{post.body}</p>

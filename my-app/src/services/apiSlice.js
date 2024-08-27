@@ -4,9 +4,9 @@ export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com/' }),
     endpoints: (builder) => ({
-        // Операції CRUD для 'posts'
         getPosts: builder.query({
-            query: () => 'posts'
+            query: () => 'posts',
+            providesTags: ['Posts']
         }),
         getPostById: builder.query({
             query: (id) => `posts/${id}`
@@ -16,7 +16,8 @@ export const apiSlice = createApi({
                 url: 'posts',
                 method: 'POST',
                 body: post
-            })
+            }),
+            invalidatesTags: ['Posts']
         }),
         updatePost: builder.mutation({
             query: ({ id, ...rest }) => ({
