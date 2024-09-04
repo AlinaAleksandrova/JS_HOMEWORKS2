@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ContactItem from './ContactItem';  // This is the individual contact display component
+import ContactItem from './ContactItem';
 
 function ContactList() {
     const contacts = useSelector(state => state.contacts.contacts);
