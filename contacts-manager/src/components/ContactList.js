@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ContactItem from './ContactItem';
+import ContactItem from './ContactItem';  // This is the individual contact display component
 
-const ContactList = () => {
+function ContactList() {
     const contacts = useSelector(state => state.contacts.contacts);
 
     return (
@@ -12,6 +12,8 @@ const ContactList = () => {
             ))}
         </div>
     );
-};
+}
 
 export default ContactList;
+
+

@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    contacts: []
+    contacts: [],
 };
 
-export const contactsSlice = createSlice({
+const contactsSlice = createSlice({
     name: 'contacts',
     initialState,
     reducers: {
@@ -12,17 +12,16 @@ export const contactsSlice = createSlice({
             state.contacts.push(action.payload);
         },
         deleteContact: (state, action) => {
-            state.contacts = state.contacts.filter(contact => contact.id !== action.payload.id);
+            state.contacts = state.contacts.filter(contact => contact.id !== action.payload);
         },
         updateContact: (state, action) => {
             const index = state.contacts.findIndex(contact => contact.id === action.payload.id);
             if (index !== -1) {
                 state.contacts[index] = action.payload;
             }
-        }
-    }
+        },
+    },
 });
 
 export const { addContact, deleteContact, updateContact } = contactsSlice.actions;
-
 export default contactsSlice.reducer;
