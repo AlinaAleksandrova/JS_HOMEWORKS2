@@ -6,7 +6,7 @@ import Controller from './Controller.js';
 
 const selectors = {
     form: '[data-form]',
-    todosContainer: '#todoForm',
+    todosContainer: '#todoItems',
     clearButton: '[data-clear-btn]',
 };
 
